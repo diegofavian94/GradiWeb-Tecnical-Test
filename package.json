@@ -1,11 +1,13 @@
 {
-  "name": "shopify-simulator",
-  "version": "1.0.2",
-  "description": "Shopify simulator template",
+  "name": "shopify-test",
+  "version": "0.1.0",
+  "description": "Shopify GradiWeb Template",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "webpack"
+    "dev": "nodemon server.js --watch sections snippets templates config --watch src --watch server.js",
+    "build": "webpack --mode development",
+    "watch": "webpack --mode development --watch"
   },
   "keywords": [
     "shopify",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.3",
+    "nodemon": "^3.1.9",
     "sass": "^1.62.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.2",

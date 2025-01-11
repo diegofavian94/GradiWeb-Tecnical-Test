@@ -1,0 +1,14 @@
+@use 'src/styles/utils' as u;
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: u.$text-color;
+  font: normal 125% / 1.4 u.$text-font-stack;
+  background-color: #fff;
+}
+
+a:link, a:visited {
+  color: inherit;
+}

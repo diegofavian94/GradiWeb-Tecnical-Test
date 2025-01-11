@@ -12,6 +12,9 @@ const engine = new Liquid({
     path.resolve(__dirname, 'snippets')
   ],
   extname: '.liquid',
+
+  //No chache on development
+  cache: process.env.NODE_ENV === 'production',
 });
 
 app.engine('liquid', engine.express());
@@ -31,6 +34,14 @@ app.get('/', (req, res) => {
     settings: settings.sections
   });
 });
+
+//Show all errors in development
+if (process.env.NODE_ENV !== 'production') {
+  app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send(`<pre>${err.stack}</pre>`);
+  });
+}
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
