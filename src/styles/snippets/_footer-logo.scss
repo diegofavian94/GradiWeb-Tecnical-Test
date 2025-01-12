@@ -1,0 +1,34 @@
+@use 'src/styles/utils' as u;
+
+.footer-logo {
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-block-end: 2rem;
+  }
+
+  &__text {
+    display: flex;
+    color: u.$secondary-color;
+    font-size: 1rem;
+
+    &--bold {
+      font-weight: bold;
+      color: u.$text-color;
+      font-size: 2.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      line-height: 0.7;
+      padding-inline-start: 1rem;
+    }
+  }
+
+  &__description {
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1.6;
+    
+  }
+
+}
