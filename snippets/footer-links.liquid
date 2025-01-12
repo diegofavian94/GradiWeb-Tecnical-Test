@@ -1,10 +1,10 @@
 <div class="footer-links">
   <div class="footer-links__container">
-      {% render 'footer-menu' %}
+      {% render 'footer-menu' settings: settings %}
       <div class="footer-links__links">
-        <a href="https://shuffle.store/refund">Refund Policy</a>
-        <a href="https://shuffle.store/privacy">Privacy Policy</a>
-        <a href="https://shuffle.store/terms">Terms of Service</a>
+        {% for link in settings['footer'].settings.links offset: 4 %}
+          <a href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
       </div>
       {% render 'header-payment-methods' %}
   </div>
