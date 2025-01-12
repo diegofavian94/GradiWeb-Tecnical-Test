@@ -1,0 +1,10 @@
+.footer {
+  padding-inline: 2.2rem;
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-block: 1rem;
+  }
+}
