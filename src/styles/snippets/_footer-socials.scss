@@ -1,0 +1,23 @@
+@use 'src/styles/utils' as u;
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-block-end: 1rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: bold;
+    align-self: flex-start;
+
+    a {
+        @extend %default-link;
+    }
+  }
+}

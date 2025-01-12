@@ -1,0 +1,11 @@
+<div class="footer-links">
+  <div class="footer-links__container">
+      {% render 'footer-menu' settings: settings %}
+      <div class="footer-links__links">
+        {% for link in settings['footer'].settings.links offset: 4 %}
+          <a href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+      {% render 'header-payment-methods' %}
+  </div>
+</div>
