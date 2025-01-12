@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all placeholders of the project
+// -----------------------------------------------------------------------------
+
+
+/// Default link style
+%default-link {
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

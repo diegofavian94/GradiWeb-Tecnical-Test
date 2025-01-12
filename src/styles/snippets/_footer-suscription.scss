@@ -1,0 +1,33 @@
+@use 'src/styles/utils' as u;
+
+.footer-suscription {
+
+  &__text {
+    font-size: 0.75rem;
+  }
+
+  &__text-title {
+    margin-block: 0.5rem;
+  }
+
+  &__input-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  
+  &__text-input {
+    padding: 0.5rem 1rem;
+    margin-block: 1rem;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  svg {
+    left: -30px;
+    position: relative;
+  }
+}
+

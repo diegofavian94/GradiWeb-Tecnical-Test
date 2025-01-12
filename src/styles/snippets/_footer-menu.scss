@@ -13,9 +13,7 @@
 
   &__item {
     
-    &:hover {
-      opacity: 0.7;
-    }
+    @extend %default-link;
 
     &:first-child {
       border-bottom: 2px solid u.$secondary-color;
