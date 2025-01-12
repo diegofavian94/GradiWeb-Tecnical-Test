@@ -20,11 +20,15 @@ $breakpoints: (
 
 /// Copy text color
 /// @type Color
-$text-color: c.$kabul !default;
+$text-color: c.$white !default;
 
 /// Background color
 /// @type Color
-$background-color: c.$dawn-pink !default;
+$background-color: c.$eerie-black !default;
+
+///Secondary color
+/// @type Color
+$secondary-color: c.$blue-violet !default;
 
 
 /// Regular font family

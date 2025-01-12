@@ -1,0 +1,21 @@
+@use 'src/styles/utils' as u;
+
+.header-menu {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__item {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  &__cart {
+    padding: 0.5rem 1rem;
+    background-color: u.$secondary-color;
+    border-radius: 5px;
+  }
+}

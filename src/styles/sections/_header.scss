@@ -1,0 +1,13 @@
+.header {
+  top: 0;
+  position: sticky;
+  padding-block: 1rem;
+  padding-inline: 4rem;
+  backdrop-filter: blur(16px);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
