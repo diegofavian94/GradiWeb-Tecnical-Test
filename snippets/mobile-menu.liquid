@@ -1,0 +1,53 @@
+<div class="mobile-menu" data-mobile-menu>
+  <button class="mobile-menu__button" type="button" aria-expanded="false" aria-controls="mobile-menu-content" data-mobile-menu-toggle> 
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="15" fill="none"><path stroke="#762CFB" stroke-width="3" d="M0 1.5h36M0 13.5h36"></path></svg>    
+  </button>
+  <div class="mobile-menu__mobile-logo">
+    {% render 'mobile-logo' settings: settings %}
+  </div>
+</div>
+
+<script>
+  class MobileMenu {
+    constructor() {
+      this.menu = document.querySelector('[data-mobile-menu]');
+      this.toggle = document.querySelector('[data-mobile-menu-toggle]');
+      this.content = document.querySelector('[data-mobile-menu-content]');
+      this.isOpen = false;
+      
+      if (this.toggle && this.content) {
+        this.init();
+      }
+    }
+
+    init() {
+      this.toggle.addEventListener('click', () => this.toggleMenu());
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', (event) => {
+        if (!this.menu.contains(event.target) && this.isOpen) {
+          this.closeMenu();
+        }
+      });
+    }
+
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
+      this.toggle.setAttribute('aria-expanded', this.isOpen);
+      this.content.classList.toggle('is-open');
+      this.menu.classList.toggle('is-active');
+    }
+
+    closeMenu() {
+      this.isOpen = false;
+      this.toggle.setAttribute('aria-expanded', false);
+      this.content.classList.remove('is-open');
+      this.menu.classList.remove('is-active');
+    }
+  }
+
+  // Initialize mobile menu
+  window.addEventListener('DOMContentLoaded', () => {
+    new MobileMenu();
+  });
+</script>

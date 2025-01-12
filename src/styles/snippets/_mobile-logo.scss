@@ -1,0 +1,19 @@
+@use 'src/styles/utils' as u;
+
+.mobile-logo {
+  display: none;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+
+  @include u.respond-to('intermediate') {
+    display: flex;
+  }
+}

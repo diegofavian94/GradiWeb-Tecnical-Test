@@ -1,0 +1,66 @@
+@use 'src/styles/utils' as u;
+
+.mobile-menu {
+  display: none;
+  position: relative;
+
+  &__button {
+    cursor: pointer;
+  }
+
+  &__content {
+    position: fixed;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transform: translateY(100%); /* Start from below the viewport */
+    transition: transform 0.4s ease-in-out;
+    visibility: hidden; /* Hide instead of display: none for animation */
+  }
+
+  &__content.is-open {
+    transform: translateY(0); /* Slide up to fill the screen */
+    visibility: visible;
+  }
+
+  // &.is-active .mobile-menu__button {
+   
+  // }
+
+  &__content-container {
+    background-color: u.$secondary-color;
+    border-radius: 5px;
+    margin: 1rem;
+    margin-block-start: 0;
+  }
+
+  &__list {
+    padding: 1rem;
+  }
+
+  &__item {
+    padding: 0 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    
+    @extend %default-link;
+
+    &:last-child {
+      margin-block-start: 5rem;
+      border: 1px solid u.$white;
+      border-radius: 10rem;
+
+      &>.header-payment-methods__container {
+        justify-content: center;
+      }
+    }
+  }
+
+  @include u.respond-to('tablet') {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

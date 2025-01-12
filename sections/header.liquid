@@ -1,7 +1,9 @@
 <header class="header">
   <div class="header__container">
+    {% render 'mobile-menu' settings: settings %}
     {% render 'header-logo' %}
-    {% render 'header-payment-methods' %}
+    <div class="header__payment-methods">{% render 'header-payment-methods' %}</div>    
     {% render 'header-menu' %}
   </div>
 </header>
+{% render 'mobile-menu-content' %}
