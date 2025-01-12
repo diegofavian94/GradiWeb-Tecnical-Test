@@ -1,4 +1,10 @@
 .header {
   padding-block: 1rem;
   padding-inline: 4rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
