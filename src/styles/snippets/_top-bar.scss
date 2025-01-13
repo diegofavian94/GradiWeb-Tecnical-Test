@@ -1,0 +1,28 @@
+@use 'src/styles/utils' as u;
+
+.top-bar {
+  position: sticky;
+  top: 0;
+
+  &__container {
+    @include u.marquee-container;
+    background-color: u.$secondary-color;
+  }
+
+  &__content {
+    @include u.marquee-content;
+  }
+
+  &__text {
+    @include u.marquee-item;
+    display: flex;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
