@@ -1,0 +1,8 @@
+@use 'src/styles/utils' as u;
+
+.header-logo {
+
+  @include u.respond-to('intermediate') {
+    display: none;
+  }
+}

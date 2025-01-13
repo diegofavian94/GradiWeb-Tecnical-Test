@@ -13,9 +13,16 @@
     font-size: 0.9rem;
   }
 
+  &__text {
+    @include u.respond-to('tablet') {
+      display: none;
+    }
+  }
+
   &__cart {
     padding: 0.5rem 1rem;
     background-color: u.$secondary-color;
     border-radius: 5px;
   }
+
 }

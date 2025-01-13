@@ -1,0 +1,25 @@
+@use 'src/styles/utils' as u;
+
+.mobile-logo {
+  display: none;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__text {
+    font-weight: bold;
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include u.respond-to('tablet') {
+      font-size: 0.8rem;
+    }
+  }
+
+  @include u.respond-to('intermediate') {
+    display: flex;
+  }
+}
