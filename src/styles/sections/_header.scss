@@ -18,4 +18,12 @@
       display: none;
     }
   }
+
+  @include u.respond-to('tablet') {
+    padding-inline: 2rem;
+  }
+
+  @include u.respond-to('intermediate') {
+    padding-inline: 1rem;
+  }
 }

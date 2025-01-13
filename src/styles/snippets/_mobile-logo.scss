@@ -11,6 +11,12 @@
 
   &__text {
     font-weight: bold;
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include u.respond-to('tablet') {
+      font-size: 0.8rem;
+    }
   }
 
   @include u.respond-to('intermediate') {
