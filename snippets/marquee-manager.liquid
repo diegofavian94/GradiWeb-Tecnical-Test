@@ -12,7 +12,15 @@
     }
 
     init() {
-      this.updateContent();
+      requestAnimationFrame(() => {
+        this.updateContent();
+        
+        // Sometimes it bugs, so better to add a small delay
+        setTimeout(() => {
+          this.updateContent();
+        }, 100);
+      });
+
       window.addEventListener('resize', () => this.updateContent());
     }
 

@@ -3,7 +3,7 @@
       {% render 'footer-menu' settings: settings %}
       <div class="footer-links__links">
         {% for link in settings['footer'].settings.links offset: 4 %}
-          <a href="{{ link.url }}">{{ link.label }}</a>
+          <a href="{{ link.url }}">{{ link.label | upcase }}</a>
         {% endfor %}
       </div>
       {% render 'header-payment-methods' %}

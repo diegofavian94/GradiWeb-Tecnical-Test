@@ -1,0 +1,55 @@
+@use 'src/styles/utils' as u;
+
+.hero-marquee {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__container {
+    @include u.marquee-container;
+    background-color: transparent;
+
+    &::before, &::after {
+      background: linear-gradient(to right, #232128, transparent);
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 125px;
+      z-index: 2;
+      pointer-events: none;
+      touch-action: none;
+    }
+
+    &::after {
+      top: 0;
+      right: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    @include u.marquee-content;
+    animation-duration: 7s;
+  }
+
+  &__text {
+    @include u.marquee-item;
+    display: flex;
+    font-size: 5.5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+
+    @include u.respond-to('tablet') {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__icon {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+    margin-left: calc(1rem - 10px);
+  }
+}

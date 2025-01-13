@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   // Set mode based on environment
@@ -11,7 +12,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'main.js',
-    clean: true
+    clean: true,
+    assetModuleFilename: 'assets/[name][ext]'
   },
 
   // Development settings
@@ -31,6 +33,25 @@ module.exports = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|avif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]'
+        }
+      },
     ],
-  }
+  },
+
+ //Plugins 
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'assets',  
+          to: 'assets'   
+        }
+      ]
+    })
+  ]
 };
