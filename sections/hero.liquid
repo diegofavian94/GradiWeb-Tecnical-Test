@@ -1,0 +1,14 @@
+<section class="hero container">
+  <div class="hero__content">
+    <div class="hero__image">
+      <img alt="hero-img" width="1360" height="600"  fetchpriority="high" decoding="async" src="/assets/hero_banner_img.avif"/>
+      <div class="hero__button-container">
+        <a href="{{ settings['hero-banner'].settings.button_link }}" class="hero__button-link">
+          <button type="button" class="hero__button">
+            <p class="hero__button-text">{{ settings['hero-banner'].settings.button_text | upcase }}</p>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

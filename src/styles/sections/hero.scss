@@ -1,0 +1,44 @@
+@use 'src/styles/utils' as u;
+
+.hero {
+
+  &__image {
+    position: relative;
+    border-radius: 5px;
+
+    img {
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  &__button-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem; 
+  }
+
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 0.4rem;
+    padding-inline: 1rem;
+    background-color: u.$secondary-color;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;   
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__button-text {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-block: 0.5rem;
+    margin-inline: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+}

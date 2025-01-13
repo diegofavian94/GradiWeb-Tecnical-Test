@@ -2,7 +2,7 @@
   <div class="footer-menu__container">
     <ul class="footer-menu__list">
       {% for link in settings['footer'].settings.links limit: 4 %}
-        <li class="footer-menu__item"><a href="{{ link.url }}">{{ link.label }}</a></li>
+        <li class="footer-menu__item"><a href="{{ link.url }}">{{ link.label | upcase }}</a></li>
       {% endfor %}
     </ul>
   </div>
