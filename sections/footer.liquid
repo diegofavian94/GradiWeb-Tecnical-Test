@@ -1,7 +1,16 @@
 <footer class="footer">
-  <div class="footer__container">
+  <div class="footer__container-desktop">
     {% render 'footer-logo' settings: settings %}
     {% render 'footer-links' settings: settings %}
     {% render 'footer-socials' %}
+  </div>
+  <div class="footer__container-tablet">
+    <div class="footer__links-tablet">
+      {% render 'footer-links' settings: settings %}
+    </div>
+    <div class="footer__logo-socials-tablet">
+      {% render 'footer-logo' settings: settings %}
+      {% render 'footer-socials' %}
+    </div>
   </div>
 </footer>
