@@ -1,0 +1,35 @@
+<script>
+  class MarqueeManager {
+    constructor(contentElement, options = {}) {
+      this.content = contentElement;
+      this.options = {
+        speed: options.speed || 20,
+        padding: options.padding || 20,
+        ...options
+      };
+      this.originalText = this.content.innerHTML;
+      this.init();
+    }
+
+    init() {
+      this.updateContent();
+      window.addEventListener('resize', () => this.updateContent());
+    }
+
+    updateContent() {
+      const containerWidth = this.content.parentElement.offsetWidth;
+      const itemWidth = this.content.children[0].offsetWidth;
+      const repetitions = Math.ceil((containerWidth * 2) / itemWidth) + 1;
+      
+      this.content.innerHTML = '';
+      
+      for (let i = 0; i < repetitions; i++) {
+        this.content.innerHTML += this.originalText;
+      }
+    }
+
+    destroy() {
+      window.removeEventListener('resize', () => this.updateContent());
+    }
+  }
+</script>

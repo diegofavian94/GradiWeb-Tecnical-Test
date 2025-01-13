@@ -106,3 +106,36 @@
     }
   }
 }
+
+/// Marquee
+@mixin marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 5px 0;
+}
+
+@mixin marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+
+  &:hover,
+  &:active {
+    animation-play-state: paused;
+  }
+}
+
+@mixin marquee-item {
+  padding: 0;
+  padding-inline-end: 10px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
