@@ -21,6 +21,7 @@ This project implements a landing page using Shopify's Liquid templating languag
 ## 🏃‍♂️ Getting Started
 
 ```bash
+npm run build
 npm start
 ```
 Check [http://localhost:3000/](http://localhost:3000/)
