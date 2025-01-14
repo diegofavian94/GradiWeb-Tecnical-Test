@@ -12,13 +12,20 @@
 </section>
 
 <script>
+  /**
+ * Implements a "View More/Less" toggle functionality for product cards.
+ * Initially shows only the first 4 products, with the ability to expand/collapse
+ * the full list via a button click.
+ */
   document.addEventListener('DOMContentLoaded', function() {
+    // Select UI elements using data attributes
     const viewMoreButton = document.querySelector('[data-view-more]');
     const productCards = document.querySelectorAll('[data-product-card]');
     let showMore = false;
     
     if (viewMoreButton) {
       viewMoreButton.addEventListener('click', function() {
+        // Toggle visibility for all products after the first 4
         productCards.forEach((card, index) => {
           if (index > 3) {
             if (showMore) {
@@ -30,6 +37,7 @@
             } 
           }
         });
+        // Update button text based on current state
         viewMoreButton.textContent = showMore ? 'view all' : 'view less';
         showMore = !showMore;
       });

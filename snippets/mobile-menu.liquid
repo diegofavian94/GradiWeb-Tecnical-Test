@@ -8,7 +8,14 @@
 </div>
 
 <script>
+  /**
+ * MobileMenu handles the mobile menu functionality.
+ * It toggles the menu and closes it when clicking outside.
+ */
   class MobileMenu {
+    /**
+   * Creates a new MobileMenu instance.   
+   */
     constructor() {
       this.menu = document.querySelector('[data-mobile-menu]');
       this.toggle = document.querySelector('[data-mobile-menu-toggle]');
@@ -20,6 +27,11 @@
       }
     }
 
+    /**
+   * Initializes the mobile menu functionality. 
+   * Sets up event listeners for toggling the menu and closing it when clicking outside.
+   * @private
+   */
     init() {
       this.toggle.addEventListener('click', () => this.toggleMenu());
       

@@ -28,9 +28,48 @@ Check [http://localhost:3000/](http://localhost:3000/)
 
 ## 🔧 Configuration
 
-The project can be configured through:
+This project has 1 important configuration file 
+- `settings_data.json`: Controls the layout and content of page sections
 
-- [MISSING]
+### Structure
+```json
+{
+  "sections": {
+    "[section-id]": {
+      "type": "string",
+      "settings": {
+        // section-specific settings
+      }
+    }
+  }
+}
+```
+### Available Sections
+
+#### Featured Products Section
+**Type:** `featured-products`
+
+Settings:
+- `heading` (string): Title displayed above featured products
+- `background_color` (string): Hex color code for section background
+
+#### Hero Banner Section
+**Type:** `hero-banner`
+
+Settings:
+- `button_text` (string): Text displayed on the CTA button
+- `button_link` (string): URL for button navigation
+- `marquee_text` (string): Text displayed in scrolling marquee
+- `background_image` (string): Filename of banner background image
+
+#### Footer Section
+**Type:** `footer`
+
+Settings:
+- `logo_text` (string): Text to display as the footer logo
+- `links` (array): Navigation links with following properties:
+  - `label` (string): Display text for the link
+  - `url` (string): URL path for navigation
 
 ## 📦 Project Structure
 
@@ -47,14 +86,6 @@ The project can be configured through:
     └── index.liquid
 ├── server.js
 ```
-
-## 💡 Usage Examples
-
-[MISSING]
-
-## 📚 Documentation
-
-[MIISSING]
 
 ## 👥 Authors
 

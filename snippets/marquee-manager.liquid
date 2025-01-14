@@ -1,5 +1,17 @@
 <script>
+  /**
+ * MarqueeManager handles the creation and management of marquee-style scrolling text.
+ * It automatically calculates and duplicates content to ensure smooth, continuous scrolling
+ * across different screen sizes.
+ */
   class MarqueeManager {
+    /**
+   * Creates a new MarqueeManager instance.
+   * @param {HTMLElement} contentElement - The DOM element containing the content to be repeated
+   * @param {Object} options - Configuration options
+   * @param {number} [options.speed=20] - Scrolling speed in pixels per second TODO
+   * @param {number} [options.padding=20] - Padding between repeated elements in pixels TODO
+   */
     constructor(contentElement, options = {}) {
       this.content = contentElement;
       this.options = {
@@ -11,6 +23,12 @@
       this.init();
     }
 
+    /**
+   * Initializes the marquee content and sets up event listeners.
+   * Uses requestAnimationFrame for smooth initial render and adds
+   * a fallback timeout to handle edge cases.
+   * @private
+   */
     init() {
       requestAnimationFrame(() => {
         this.updateContent();
@@ -24,6 +42,12 @@
       window.addEventListener('resize', () => this.updateContent());
     }
 
+    /**
+   * Calculates required repetitions and updates the content accordingly.
+   * Ensures content fills twice the container width plus one repetition
+   * to maintain smooth scrolling effect.
+   * @private
+   */
     updateContent() {
       const containerWidth = this.content.parentElement.offsetWidth;
       const itemWidth = this.content.children[0].offsetWidth;
