@@ -15,7 +15,7 @@ This project implements a landing page using Shopify's Liquid templating languag
 
 ## 🛠 Installation
 
-1. `https://github.com/diegofavian94/GradiWeb-Tecnical-Test.git` 
+1. `git clone https://github.com/diegofavian94/GradiWeb-Tecnical-Test.git` 
 2. `npm install`
 
 ## 🏃‍♂️ Getting Started
