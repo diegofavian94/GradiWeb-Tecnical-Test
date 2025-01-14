@@ -41,9 +41,9 @@
 
   &__item {
     padding: 0 1rem;
-    font-weight: bold;
+    // font-weight: bold;
     font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: u.$title-font-stack;
     
     @extend %default-link;
 

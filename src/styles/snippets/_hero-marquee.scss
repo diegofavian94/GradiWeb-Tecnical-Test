@@ -35,10 +35,10 @@
     @include u.marquee-item;
     display: flex;
     font-size: 5.5rem;
-    font-weight: bold;
+    // font-weight: bold;
     justify-content: center;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: u.$title-font-stack;
 
     @include u.respond-to('tablet') {
       font-size: 3.5rem;

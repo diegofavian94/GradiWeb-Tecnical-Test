@@ -34,6 +34,11 @@ $secondary-color: c.$blue-violet !default;
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'libre-baskerville', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Aeonik', 'libre-baskerville', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Title font family
+/// @type List
+$title-font-stack: 'Countach', 'Courier New', Courier, monospace !default;
+
 
 

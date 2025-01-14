@@ -47,8 +47,8 @@
       border-radius: 5px;
       padding: 0.7rem 1rem;
       font-size: 1.7rem;
-      font-family: 'Courier New', Courier, monospace;
-      font-weight: bold;
+      font-family: u.$title-font-stack;
+      // font-weight: bold;
       text-transform: uppercase;
       transition: background-color 0.2s ease-in-out;
 
