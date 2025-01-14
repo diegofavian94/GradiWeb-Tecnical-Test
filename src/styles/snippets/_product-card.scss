@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-wrap: nowrap;
 
   &__image {
     display: flex;
@@ -45,5 +46,9 @@
     background-color: u.$secondary-color;
     border-radius: 50%;
     padding-inline: 10px;
+
+    @include u.respond-to('tablet') {
+      display: none;
+    }
   }
 }
